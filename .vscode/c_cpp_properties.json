@@ -4,8 +4,9 @@
             "name": "UnrealEngine",
             "includePath": [
                 "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Source",
-                "C:\\Users\\SHAAN\\Desktop\\Unreal Engine\\BattleTank\\BattleTank\\Source",
-                "C:\\Users\\SHAAN\\Desktop\\Unreal Engine\\BattleTank\\BattleTank\\Source\\BattleTank",
+                "C:\\Users\\SHAAN\\Desktop\\Unreal Engine\\BattleTank\\Intermediate\\Build\\Win64\\UE4Editor\\Inc\\BattleTank",
+                "C:\\Users\\SHAAN\\Desktop\\Unreal Engine\\BattleTank\\Source",
+                "C:\\Users\\SHAAN\\Desktop\\Unreal Engine\\BattleTank\\Source\\BattleTank",
                 "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Source\\Runtime",
                 "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Source\\Runtime\\Core\\Public",
                 "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Source\\Runtime\\Core",

@@ -1,7 +1,9 @@
 {
 	"files.exclude": {
-		"C:/Users/SHAAN/Desktop/Unreal Engine/BattleTank/BattleTank/.vscode": true,
-		"C:/Users/SHAAN/Desktop/Unreal Engine/BattleTank/BattleTank/Content": true,
-		"C:/Users/SHAAN/Desktop/Unreal Engine/BattleTank/BattleTank/Intermediate": true
+		"C:/Users/SHAAN/Desktop/Unreal Engine/BattleTank/.git": true,
+		"C:/Users/SHAAN/Desktop/Unreal Engine/BattleTank/.vscode": true,
+		"C:/Users/SHAAN/Desktop/Unreal Engine/BattleTank/Content": true,
+		"C:/Users/SHAAN/Desktop/Unreal Engine/BattleTank/Intermediate": true,
+		"C:/Users/SHAAN/Desktop/Unreal Engine/BattleTank/Saved": true
 	}
 }
