@@ -30,7 +30,7 @@ private:
 	float CrosshairYLocation = 0.33333;
 
 	UPROPERTY(EditAnywhere)
-	float LineTraceRange = 1000000;
+	float LineTraceRange = 1000000.0;
 
 	// Start the tank moving the barrel so that a shot would hit where the crosshair intersects the world
 	void AimTowardsCrosshair();
