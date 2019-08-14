@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright SH44N96
 
 #include "TankTurret.h"
 
