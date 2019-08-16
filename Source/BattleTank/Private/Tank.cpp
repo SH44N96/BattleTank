@@ -1,9 +1,7 @@
 // Copyright SH44N96
 
-#include "Projectile.h"
 #include "TankAimingComponent.h"
-#include "TankMovementComponent.h"
-#include "TankTurret.h"
+#include "Projectile.h"
 #include "TankBarrel.h"
 #include "Tank.h"
 

@@ -1,7 +1,7 @@
 // Copyright SH44N96
 
-#include "TankTurret.h"
 #include "TankBarrel.h"
+#include "TankTurret.h"
 #include "TankAimingComponent.h"
 
 // Sets default values for this component's properties

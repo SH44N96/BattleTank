@@ -7,11 +7,9 @@
 #include "Tank.generated.h" // Put new #includes above
 
 // Forward Declarations
-class UTankBarrel;
-class UTankTurret;
 class UTankAimingComponent;
-class UTankMovementComponent;
 class AProjectile;
+class UTankBarrel;
 
 UCLASS()
 class BATTLETANK_API ATank : public APawn
@@ -32,9 +30,6 @@ public:
 protected:
 	UPROPERTY(BlueprintReadOnly)
 	UTankAimingComponent* TankAimingComponent = nullptr;
-
-	UPROPERTY(BlueprintReadOnly)
-	UTankMovementComponent* TankMovementComponent = nullptr;
 
 private:
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
