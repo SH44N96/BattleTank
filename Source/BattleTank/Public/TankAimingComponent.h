@@ -44,6 +44,9 @@ public:
 	void Fire();
 
 protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Setup")
+	TSubclassOf<AProjectile> ProjectileBlueprint;
+
 	UPROPERTY(BlueprintReadOnly, Category = "State")
 	EFiringState FiringState = EFiringState::Reloading;
 
@@ -51,9 +54,6 @@ private:
 	UTankBarrel* Barrel = nullptr;
 
 	UTankTurret* Turret = nullptr;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Setup")
-	TSubclassOf<AProjectile> ProjectileBlueprint;
 
 	FVector AimDirection;
 
