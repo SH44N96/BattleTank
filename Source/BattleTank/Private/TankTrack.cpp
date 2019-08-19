@@ -23,7 +23,7 @@ void UTankTrack::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UP
 {
     DriveTrack();
     ApplySidewaysForce();
-    CurrentThrottle = 0.0;
+    CurrentThrottle = 0;
 }
 
 void UTankTrack::ApplySidewaysForce()
