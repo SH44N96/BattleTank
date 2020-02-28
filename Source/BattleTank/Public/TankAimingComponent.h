@@ -67,11 +67,12 @@ private:
 	float LaunchSpeed = 8000.0;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
-	float ReloadTimeInSeconds = 3.0;
+	float ReloadTimeInSeconds = 0.1;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Firing")
+	int32 RoundsLeft = 20;
 
 	double LastFireTime = 0.0;
-
-	int RoundsLeft = 3;
 
 	void MoveBarrelTowards(FVector AimDirection);
 
