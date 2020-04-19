@@ -15,7 +15,7 @@ class BATTLETANK_API UTankTurret : public UStaticMeshComponent
 	GENERATED_BODY()
 	
 public:
-	// -1 is max. leftward movement, and +1 is max. rightward movement
+	// -1 is Max. Leftward Movement, and +1 is Max. Rightward Movement
 	void Rotate(float RelativeSpeed);
 
 private:

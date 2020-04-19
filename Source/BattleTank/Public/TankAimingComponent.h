@@ -7,7 +7,7 @@
 #include "Components/ActorComponent.h"
 #include "TankAimingComponent.generated.h"
 
-// ENUM for aiming state
+// ENUM for Aiming State
 UENUM()
 enum class EFiringState : uint8
 {
@@ -22,7 +22,7 @@ class UTankBarrel;
 class UTankTurret;
 class AProjectile;
 
-// Holds Barrel's properties and Elevate() method
+// Holds Barrel's Properties and Elevate() Method
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class BATTLETANK_API UTankAimingComponent : public UActorComponent
 {

@@ -4,12 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
-#include "TankPlayerController.generated.h" // Must be the last include
+#include "TankPlayerController.generated.h" // Must be the Last Include
 
 class UTankAimingComponent;
 
 /**
- * Responsible for helping the player aim.
+ * Responsible for Helping the Player Aim
  */
 UCLASS()
 class BATTLETANK_API ATankPlayerController : public APlayerController
@@ -35,10 +35,10 @@ private:
 	UPROPERTY(EditDefaultsOnly)
 	float LineTraceRange = 1000000.0;
 
-	// Start the tank moving the barrel so that a shot would hit where the crosshair intersects the world
+	// Start the Tank Moving the Barrel so that a Shot would Hit where the Crosshair Intersects the World
 	void AimTowardsCrosshair();
 
-	// Return an OUT parameter, true if hits landscape
+	// Return an OUT Parameter, True if Hits Landscape
 	bool GetSightRayHitLocation(FVector& HitLocation) const;
 
 	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;

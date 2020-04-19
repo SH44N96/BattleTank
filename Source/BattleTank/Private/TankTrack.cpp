@@ -28,14 +28,14 @@ void UTankTrack::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UP
 
 void UTankTrack::ApplySidewaysForce()
 {
-    // Workout the required acceleration this frame to correct
+    // Workout the Required Acceleration this Frame to Correct
     auto SlippageSpeed = FVector::DotProduct(GetRightVector(), GetComponentVelocity());
     auto DeltaTime = GetWorld()->GetDeltaSeconds();
     auto CorrectionAcceleration = -SlippageSpeed / DeltaTime * GetRightVector();
 
-    // Calculate and apply sideways (F = ma)
+    // Calculate and Apply Sideways (F = ma)
     auto TankRoot = Cast<UStaticMeshComponent>(GetOwner()->GetRootComponent());
-    auto CorrectionForce = (TankRoot->GetMass() * CorrectionAcceleration) / 2; // Two tracks
+    auto CorrectionForce = (TankRoot->GetMass() * CorrectionAcceleration) / 2; // Two Tracks
     TankRoot->AddForce(CorrectionForce);
 }
 

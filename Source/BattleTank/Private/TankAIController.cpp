@@ -1,8 +1,9 @@
 // Copyright SH44N96
 
-#include "TankAimingComponent.h"
 #include "TankAIController.h"
-// Depends on movement component via pathfinding system
+#include "TankAimingComponent.h"
+
+// Depends on Movement Component via Pathfinding System
 
 void ATankAIController::BeginPlay()
 {
@@ -18,15 +19,15 @@ void ATankAIController::Tick(float DeltaTime)
 
     if(!ensure(PlayerTank && ControlledTank)) { return; }
 
-    // Move towards the player
-    MoveToActor(PlayerTank, AcceptanceRadius); // TODO: Check radius is in cm
+    // Move Towards the Player
+    MoveToActor(PlayerTank, AcceptanceRadius); // TODO: Check Radius is in cm
 
-    // Aim towards the player
+    // Aim Towards the Player
     auto AimingComponent = ControlledTank->FindComponentByClass<UTankAimingComponent>();
     AimingComponent->AimAt(PlayerTank->GetActorLocation());
 
     if(AimingComponent->GetFiringState() == EFiringState::Locked)
     {
-        AimingComponent->Fire(); // TODO: Limit firing rate
+        AimingComponent->Fire(); // TODO: Limit Firing Rate
     }
 }
