@@ -18,7 +18,7 @@ void UTankAimingComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// So that First Fire is after Initial Reload
+	// So that first fire is after initial reload
 	LastFireTime = FPlatformTime::Seconds();
 }
 void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -72,7 +72,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 		MoveBarrelTowards(AimDirection);
 	}
 	
-	// If No Solution, Do Nothing
+	// If no solution, do nothing
 }
 
 void UTankAimingComponent::Fire()
@@ -82,7 +82,7 @@ void UTankAimingComponent::Fire()
 		if(!ensure(Barrel)) { return; }
 		if(!ensure(ProjectileBlueprint)) { return; }
 
-		// Spawn a Projectile at the Socket Location on the Barrel		
+		// Spawn a projectile at the socket location on the barrel		
 		auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileBlueprint, Barrel->GetSocketLocation(FName("Projectile")), Barrel->GetSocketRotation(FName("Projectile")));
 
 		Projectile->LaunchProjectile(LaunchSpeed);
@@ -95,18 +95,18 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
 	if(!ensure(Barrel) || !ensure(Turret)) { return; }
 	
-	// Work Out Difference between Current Barrel Rotation, and AimDirection
+	// Work out difference between current barrel rotation, and AimDirection
 	auto BarrelRotator = Barrel->GetForwardVector().Rotation();
 	auto AimAsRotator = AimDirection.Rotation();
 	auto DeltaRotator = AimAsRotator - BarrelRotator;
 
-	// Always Yaw the Shortest Way
+	// Always yaw the shortest way
 	Barrel->Elevate(DeltaRotator.Pitch);
 	if(FMath::Abs(DeltaRotator.Yaw) < 180)
 	{
 		Turret->Rotate(DeltaRotator.Yaw);
 	}
-	else // Avoid Going the Long Way Round
+	else // Avoid going the long way round
 	{
 		Turret->Rotate(-DeltaRotator.Yaw);
 	}
@@ -117,5 +117,5 @@ bool UTankAimingComponent::IsBarrelMoving()
 	if(!ensure(Barrel)) { return false; }
 
 	auto BarrelForward = Barrel->GetForwardVector();
-	return !BarrelForward.Equals(AimDirection, 0.01); // Vectors are Equal
+	return !BarrelForward.Equals(AimDirection, 0.01); // Vectors are equal
 }

@@ -7,7 +7,7 @@
 #include "TankTrack.generated.h"
 
 /**
- * TankTrack is Used to Set Maximum Driving Force, and to Apply Forces to the Tank
+ * TankTrack is used to set maximum driving force, and to apply forces to the tank
  */
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class BATTLETANK_API UTankTrack : public UStaticMeshComponent
@@ -19,21 +19,21 @@ public:
 
 	virtual void BeginPlay() override;
 
-	// Max Force per Track, in Newtons
+	// Max. force per track, in Newtons
 	UPROPERTY(EditDefaultsOnly)
-	float TrackMaxDrivingForce = 40000000.0; // Assume 40-Tonne Tank, and 1ms-2 Acceleration
+	float TrackMaxDrivingForce = 40000000.0; // Assume 40-tonne tank, and 1ms-2 acceleration
 
-	// Sets a Throttle between -1 and +1
+	// Sets a throttle between -1 and +1
 	UFUNCTION(BlueprintCallable, Category = "Input")
 	void SetThrottle(float Throttle);
 
 private:
-	float CurrentThrottle = 0.0;
-
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 
 	void ApplySidewaysForce();
 
 	void DriveTrack();
+
+	float CurrentThrottle = 0.0;
 };
