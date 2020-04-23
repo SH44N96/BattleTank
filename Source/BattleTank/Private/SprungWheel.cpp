@@ -22,19 +22,24 @@ ASprungWheel::ASprungWheel()
 	AxleWheelConstraint->SetupAttachment(Axle);
 }
 
+// Called every frame
+void ASprungWheel::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+}
+
+void ASprungWheel::AddDrivingForce(float ForceMagnitude)
+{
+	Wheel->AddForce(Axle->GetForwardVector() * ForceMagnitude);
+}
+
 // Called when the game starts or when spawned
 void ASprungWheel::BeginPlay()
 {
 	Super::BeginPlay();
 	
 	SetupConstraint();
-}
-
-// Called every frame
-void ASprungWheel::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
 }
 
 void ASprungWheel::SetupConstraint()

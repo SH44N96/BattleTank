@@ -17,8 +17,6 @@ class BATTLETANK_API UTankTrack : public UStaticMeshComponent
 public:
 	UTankTrack();
 
-	virtual void BeginPlay() override;
-
 	// Max. force per track, in Newtons
 	UPROPERTY(EditDefaultsOnly)
 	float TrackMaxDrivingForce = 40000000.0; // Assume 40-tonne tank, and 1ms-2 acceleration
@@ -28,12 +26,7 @@ public:
 	void SetThrottle(float Throttle);
 
 private:
-	UFUNCTION()
-	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
+	TArray<class ASprungWheel*> GetWheels() const;
 
-	void ApplySidewaysForce();
-
-	void DriveTrack();
-
-	float CurrentThrottle = 0.0;
+	void DriveTrack(float CurrentThrottle);
 };
